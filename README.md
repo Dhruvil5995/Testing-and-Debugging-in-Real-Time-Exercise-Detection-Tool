@@ -34,22 +34,22 @@ The project has been structured to make testing and debugging an integral part o
 ## Testing and Debugging
 Testing and debugging were a crucial part of this project. I wrote unit tests for every core function and made sure the system behaved as expected, even in a real-time setting. Below are some of the things I focused on during testing:
 
-1. Unit Testing with pytest
+1. **Unit Testing with pytest**
 I applied unit testing to ensure each part of the system functions correctly in isolation. For example, I tested the model loading process, keypoint extraction, and the prediction logic of the LSTM model. This gave me confidence that any issues would be caught early before integrating the components.
 
 - Here’s an example test for model loading:
+    ´´´sh
+    def test_model_loading():
+        with patch('live_test.load_model') as mock_load_model:
+            mock_model = MagicMock()
+            mock_load_model.return_value = mock_model
+            model = load_model('dummy_model.h5')
+            assert model == mock_model
 
-def test_model_loading():
-    with patch('live_test.load_model') as mock_load_model:
-        mock_model = MagicMock()
-        mock_load_model.return_value = mock_model
-        model = load_model('dummy_model.h5')
-        assert model == mock_model
-
-2. Mocking and Patching
+2. **Mocking and Patching**
 I used mocking to simulate external dependencies like webcam input and model loading, which allowed me to isolate individual components for testing. This helped me avoid relying on hardware (like a physical webcam) during the testing phase.
 
-3. Debugging
+3. **Debugging**
 I debugged the system using logging to track key events (e.g., pose detection, prediction accuracy) and pdb for stepping through the code. This allowed me to quickly identify and fix any issues, especially during the real-time execution.
 
 
