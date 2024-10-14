@@ -40,7 +40,7 @@ I applied unit testing to ensure each part of the system functions correctly in 
 - Here’s an example test for model loading:
 
   ´´´sh
-        def test_model_loading():
+      def test_model_loading():
             with patch('live_test.load_model') as mock_load_model:
                 mock_model = MagicMock()
                 mock_load_model.return_value = mock_model
