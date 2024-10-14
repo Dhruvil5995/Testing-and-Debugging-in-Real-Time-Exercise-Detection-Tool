@@ -9,6 +9,7 @@ The project has been structured to make testing and debugging an integral part o
 * Python for scripting and overall application logic. **
 
 ** Mediapipe for real-time pose detection.
+
 ** OpenCV to handle video feeds from the webcam.
 TensorFlow/Keras for building and training the LSTM model.
 pytest and unittest for writing and running tests.
