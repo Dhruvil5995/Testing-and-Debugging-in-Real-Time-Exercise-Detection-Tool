@@ -48,11 +48,6 @@ def test_model_loading():
         assert model == mock_model
 
 
-```python
-def example_function():
-    print("This is how you write code in a README file")
-
-
 2. **Mocking and Patching**
 I used mocking to simulate external dependencies like webcam input and model loading, which allowed me to isolate individual components for testing. This helped me avoid relying on hardware (like a physical webcam) during the testing phase.
 
