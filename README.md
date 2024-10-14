@@ -38,9 +38,7 @@ Testing and debugging were a crucial part of this project. I wrote unit tests fo
 I applied unit testing to ensure each part of the system functions correctly in isolation. For example, I tested the model loading process, keypoint extraction, and the prediction logic of the LSTM model. This gave me confidence that any issues would be caught early before integrating the components.
 
 - Here’s an example test for model loading:
-```sh
-    python trainmodel.py
-  
+
     ´´´sh
         def test_model_loading():
             with patch('live_test.load_model') as mock_load_model:
