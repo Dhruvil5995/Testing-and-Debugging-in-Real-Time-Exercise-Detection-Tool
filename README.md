@@ -6,7 +6,7 @@ The project has been structured in a way that makes testing and debugging an int
 
 
 ## Technologies I Used
-** Python for scripting and overall application logic.
+** Python for scripting and overall application logic. ** 
 ** Mediapipe for real-time pose detection.
 ** OpenCV to handle video feeds from the webcam.
 TensorFlow/Keras for building and training the LSTM model.
